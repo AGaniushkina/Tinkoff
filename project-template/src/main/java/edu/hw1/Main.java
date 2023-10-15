@@ -2,6 +2,7 @@ package edu.hw1;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
@@ -12,16 +13,19 @@ public final class Main {
     }
 
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        LOGGER.info("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 0; i <= 2; i++) {
+        LOGGER.info("Hello world!");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            LOGGER.info("i = {}", i);
-        }
+        Scanner in = new Scanner(System.in);
+
+       System.out.println((new Task1(in.next()).secondsCount));
+       System.out.println((new Task2(in.nextInt()).digitsCount));
+       System.out.println((new Task3(new Integer[]{1, 2, 3, 4}, new Integer[]{0, 6}).nestable));
+       System.out.println((new Task4(in.nextLine()).fixedString));
+       System.out.println((new Task5(in.nextInt()).isPalindrom));
+       System.out.println((new Task6(in.nextInt()).count));
+       System.out.println((new Task7(in.nextInt(), in.nextInt()).rotetedLeft));
+       System.out.println((new Task7(in.nextInt(), in.nextInt()).rotetedRight));
+
     }
 }
