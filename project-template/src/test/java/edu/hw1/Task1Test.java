@@ -18,5 +18,18 @@ public class Task1Test {
         assertThat(secondsValue)
             .isEqualTo(60);
     }
+    @Test
+    @DisplayName("Перевод минут в секунды, некорректное количество секунд")
+    void convertMinutesToSeconds2() {
+        // given
+        String str = "01:99";
+
+        // when
+        int secondsValue = Task1.minutesToSeconds(str);
+
+        // then
+        assertThat(secondsValue)
+            .isEqualTo(-1);
+    }
 
 }
